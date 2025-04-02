@@ -155,10 +155,3 @@ This app is ready to be deployed to:
 - DynamoDB (cloud)
 
 A full `serverless.yml` config is coming in the next phase of the project.
-
-
-## 🙌 Credits
-
-Made with ❤️ by Aniket  
-Built for learning, demos, and real-world scaling ✨
-```
