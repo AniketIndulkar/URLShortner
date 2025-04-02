@@ -33,7 +33,7 @@ This project includes a demo web UI, time-based URL expiry (TTL), usage analytic
 ### 📦 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/url-shortener-mvp.git
+git clone https://github.com/AniketIndulkar/URLShortner.git
 cd url-shortener-mvp
 
 ### ✅ Step 2: Install Dependencies
