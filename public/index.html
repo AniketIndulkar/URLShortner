@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>URL Shortener Demo</title>
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: 40px auto; }
+    input, button { padding: 10px; margin: 10px 0; width: 100%; }
+    .result { background: #f3f3f3; padding: 10px; margin-top: 20px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>🌐 URL Shortener</h1>
+  <input type="text" id="originalUrl" placeholder="Enter long URL" />
+  <input type="text" id="createdBy" placeholder="Created by (optional)" />
+  <button onclick="shorten()">Shorten</button>
+
+  <div class="result" id="result" style="display:none;">
+    <p><strong>Short URL:</strong> <a id="shortUrl" href="#" target="_blank"></a></p>
+    <button onclick="viewAnalytics()">View Analytics</button>
+    <pre id="analytics" style="display:none;"></pre>
+  </div>
+
+  <script>
+    async function shorten() {
+      const originalUrl = document.getElementById("originalUrl").value;
+      const createdBy = document.getElementById("createdBy").value;
+      const response = await fetch("/shorten", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ originalUrl, createdBy })
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        document.getElementById("shortUrl").textContent = data.shortUrl;
+        document.getElementById("shortUrl").href = data.shortUrl;
+        document.getElementById("result").style.display = "block";
+        document.getElementById("analytics").style.display = "none";
+        window.lastShortId = data.shortUrl.split("/").pop(); // store for analytics
+      } else {
+        alert(data.error || "Failed to shorten URL");
+      }
+    }
+
+    async function viewAnalytics() {
+      const res = await fetch(`/analytics/${window.lastShortId}`);
+      const data = await res.json();
+      document.getElementById("analytics").textContent = JSON.stringify(data, null, 2);
+      document.getElementById("analytics").style.display = "block";
+    }
+  </script>
+</body>
+</html>
