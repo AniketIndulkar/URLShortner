@@ -6,7 +6,6 @@ This project includes a demo web UI, time-based URL expiry (TTL), usage analytic
 
 
 ## 🚀 Features
-
 - 🔐 **Secure short ID generation** using Base62 and Node's `crypto` module
 - 🌐 **URL normalization** and validation to prevent duplication and ensure consistency
 - ⏳ **Automatic URL expiry** after 60 minutes via DynamoDB TTL
@@ -17,7 +16,6 @@ This project includes a demo web UI, time-based URL expiry (TTL), usage analytic
 
 
 ## 🧰 Tech Stack
-
 - **Node.js**
 - **Express** (local server only)
 - **AWS SDK v3** for JavaScript
@@ -29,7 +27,6 @@ This project includes a demo web UI, time-based URL expiry (TTL), usage analytic
 
 
 ## 🛠️ Getting Started
-
 ### 📦 1. Clone the Repository
 
 ```bash
@@ -44,7 +41,6 @@ npm install
 
 
 ### ✅ Step 3: Configure Environment
-
 Create a `.env` file in the root:
 
 ```env
