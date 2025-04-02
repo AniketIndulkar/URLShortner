@@ -4,7 +4,6 @@ A lightweight, secure, and customizable URL shortening service built using **Nod
 
 This project includes a demo web UI, time-based URL expiry (TTL), usage analytics, and is serverless-ready for future deployment on AWS Lambda and API Gateway.
 
----
 
 ## 🚀 Features
 
@@ -16,7 +15,6 @@ This project includes a demo web UI, time-based URL expiry (TTL), usage analytic
 - 🖥️ **Web UI** for local demo and interaction
 - ☁️ **Serverless-ready** architecture (AWS Lambda compatible)
 
----
 
 ## 🧰 Tech Stack
 
@@ -29,7 +27,6 @@ This project includes a demo web UI, time-based URL expiry (TTL), usage analytic
 - **UUID**, **crypto**
 - **Jest** for testing
 
----
 
 ## 🛠️ Getting Started
 
@@ -45,7 +42,6 @@ cd url-shortener-mvp
 npm install
 ```
 
----
 
 ### ✅ Step 3: Configure Environment
 
@@ -60,7 +56,6 @@ DYNAMO_ENDPOINT=http://localhost:8000
 PORT=3000
 ```
 
----
 
 ### ✅ Step 4: Run DynamoDB Locally (JAR Method)
 
@@ -95,8 +90,6 @@ aws dynamodb create-table \
   --region us-west-2
 ```
 
----
-
 ### ✅ Step 6: Run the Application
 
 ```bash
@@ -107,8 +100,6 @@ The server will start on:
 ```
 http://localhost:3000/
 ```
-
----
 
 ### ✅ Step 7: Access the Web UI
 
@@ -123,7 +114,6 @@ Use it to:
 - Test redirection
 - View analytics
 
----
 
 ### ✅ Step 8: Run Tests (Optional)
 
@@ -131,7 +121,6 @@ Use it to:
 npm test
 ```
 
----
 
 ## 📌 Project Structure
 
@@ -148,7 +137,6 @@ url-shortener-mvp/
 └── README.md
 ```
 
----
 
 ## ✅ You’re Ready!
 
@@ -158,7 +146,6 @@ This fully local app supports:
 - Web UI for demo
 - Test suite for validation
 
----
 
 ## 🧭 Next Step: Deploy to AWS
 
@@ -169,7 +156,6 @@ This app is ready to be deployed to:
 
 A full `serverless.yml` config is coming in the next phase of the project.
 
----
 
 ## 🙌 Credits
 
