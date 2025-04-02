@@ -66,8 +66,6 @@ java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb -p
 
 This will run DynamoDB on `http://localhost:8000`.
 
----
-
 ### ✅ Step 5: Create the DynamoDB Table
 
 ```bash
