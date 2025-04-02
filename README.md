@@ -34,6 +34,7 @@ This project includes a demo web UI, time-based URL expiry (TTL), usage analytic
 
 ```bash
 git clone https://github.com/AniketIndulkar/URLShortner.git
+```
 
 ### ✅ Step 2: Install Dependencies
 
