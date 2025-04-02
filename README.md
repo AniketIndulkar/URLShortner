@@ -1,45 +1,43 @@
-```markdown
 # 🔗 URL Shortener MVP (Local Version)
 
-A simple, secure, and customizable URL shortening service built with **Node.js**, **Express**, and **DynamoDB Local**.  
-Includes a web UI for demo, full TTL support, analytics, and a clean API.
+A lightweight, secure, and customizable URL shortening service built using **Node.js**, **Express**, and **DynamoDB Local**.
+
+This project includes a demo web UI, time-based URL expiry (TTL), usage analytics, and is serverless-ready for future deployment on AWS Lambda and API Gateway.
 
 ---
 
 ## 🚀 Features
 
-- 🔐 Secure short ID generation (Base62 + crypto)
-- 🔗 URL normalization and validation
-- ⏰ Auto-expiry after 60 minutes (via TTL)
-- 📊 Analytics endpoint for tracking clicks and usage
-- 🧪 Jest test suite
-- 🌐 Web-based UI for demo
-- ⚙️ Ready for AWS Lambda + API Gateway (serverless-ready)
+- 🔐 **Secure short ID generation** using Base62 and Node's `crypto` module
+- 🌐 **URL normalization** and validation to prevent duplication and ensure consistency
+- ⏳ **Automatic URL expiry** after 60 minutes via DynamoDB TTL
+- 📊 **Click analytics** endpoint to track usage statistics
+- 🧪 **Test suite** with Jest for reliable and repeatable testing
+- 🖥️ **Web UI** for local demo and interaction
+- ☁️ **Serverless-ready** architecture (AWS Lambda compatible)
 
 ---
 
-## 🧰 Technologies
+## 🧰 Tech Stack
 
-- Node.js
-- Express (local only)
-- AWS SDK (DynamoDB Local)
-- DynamoDB TTL
-- Base62 encoding (`base-x`)
-- UUID, crypto
-- Jest for testing
+- **Node.js**
+- **Express** (local server only)
+- **AWS SDK v3** for JavaScript
+- **DynamoDB Local** (for development/testing)
+- **TTL support** using DynamoDB item expiration
+- **Base62 encoding** (`base-x`)
+- **UUID**, **crypto**
+- **Jest** for testing
 
 ---
 
-## 🛠️ Setup Instructions
+## 🛠️ Getting Started
 
-### ✅ Step 1: Clone the Repository
+### 📦 1. Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/url-shortener-mvp.git
 cd url-shortener-mvp
-```
-
----
 
 ### ✅ Step 2: Install Dependencies
 
@@ -175,19 +173,6 @@ A full `serverless.yml` config is coming in the next phase of the project.
 
 ## 🙌 Credits
 
-Made with ❤️ by [Your Name]  
+Made with ❤️ by Aniket  
 Built for learning, demos, and real-world scaling ✨
 ```
-
----
-
-✅ You can now copy this file directly into your project root as `README.md` and commit it:
-
-```bash
-echo "<paste content here>" > README.md
-git add README.md
-git commit -m "Add complete README with local setup instructions"
-git push origin main
-```
-
-Let me know when you're ready to resume deployment to AWS!
