@@ -1,13 +1,3 @@
-Great catch! Let's revise and clean it up:
-
-- ✅ **Remove Docker instructions**
-- ✅ **Add JAR-based DynamoDB Local setup**
-- ✅ 📄 Ensure the full file is valid Markdown (`README.md`)
-
-Here’s the corrected and complete `README.md`:
-
----
-
 ```markdown
 # 🔗 URL Shortener MVP (Local Version)
 
